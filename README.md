@@ -26,8 +26,18 @@ It wrote the code, ran away, and now the game is unplayable.
 ## 📝 Document Your Experience
 
 - [ ] Describe the game's purpose.
+A number guessing game where the player tries to guess a secret 
+number within a limited number of attempts, receiving hints after each guess.
 - [ ] Detail which bugs you found.
+- Hints were backwards (Go HIGHER when should say Go LOWER)
+  - Secret number was converted to a string on even attempts causing wrong comparisons
+  - Hard mode range (1-50) was easier than Normal mode (1-100)
+
 - [ ] Explain what fixes you applied.
+- Fixed check_guess function to return correct hints
+  - Removed string conversion of secret number on even attempts
+  - Refactored check_guess into logic_utils.py
+  - All 4 pytest tests now pass
 
 ## 📸 Demo
 
