@@ -76,4 +76,4 @@ since it gives a clear target for AI tools to focus on. Next time I work with AI
 a coding task, I would verify every AI suggestion by testing it myself before moving on
 rather than assuming it is correct. This project changed how I think about AI generated
 code because I now understand that AI can introduce subtle bugs like type mismatches
-that are hard to spot without careful testing.
+that are hard to spot without testing.
