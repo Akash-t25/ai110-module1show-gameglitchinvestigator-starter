@@ -13,12 +13,18 @@ def parse_guess(raw: str):
 
 
 def check_guess(guess, secret):
+    # FIX: Refactored check_guess into logic_utils.py using Claude Agent mode
+# FIX: Fixed backwards hints - guess > secret now correctly returns Go LOWER
     """
     Compare guess to secret and return (outcome, message).
 
     outcome examples: "Win", "Too High", "Too Low"
     """
-    raise NotImplementedError("Refactor this function from app.py into logic_utils.py")
+    if guess == secret:
+        return "Win", "🎉 Correct!"
+    if guess > secret:
+        return "Too High", "📉 Go LOWER!"
+    return "Too Low", "📈 Go HIGHER!"
 
 
 def update_score(current_score: int, outcome: str, attempt_number: int):
